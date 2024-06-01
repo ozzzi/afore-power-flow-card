@@ -1,0 +1,90 @@
+type: custom:sunsynk-power-flow-card
+cardstyle: compact
+show_solar: true
+battery:
+  energy: 0
+  show_daily: true
+  invert_power: false
+  auto_scale: true
+  show_absolute: false
+  dynamic_colour: false
+  charge_colour:
+    - 12
+    - 132
+    - 207
+  animate: true
+  colour:
+    - 23
+    - 155
+    - 56
+  shutdown_soc: 20
+  shutdown_soc_offgrid: 20
+  show_remaining_energy: false
+  max_power: 2400
+solar:
+  show_daily: true
+  mppts: 2
+  pv2_name: Восток
+  pv1_max_power: 2000
+  pv2_max_power: 2000
+  auto_scale: true
+  max_power: 4000
+  efficiency: 1
+  dynamic_colour: true
+  pv1_name: Юг
+load:
+  show_daily: true
+  auto_scale: true
+  dynamic_colour: true
+  dynamic_icon: true
+  load1_name: Бойлер
+  load1_icon: mdi:shower-head
+  additional_loads: 1
+grid:
+  show_daily_buy: true
+  show_daily_sell: false
+  show_nonessential: true
+  auto_scale: true
+entities:
+  nonessential_power: none
+  day_pv_energy_108: sensor.afore_pv_etoday
+  pv1_power_186: sensor.afore_pv1_w
+  pv2_power_187: sensor.afore_pv2_w
+  pv1_current_110: sensor.afore_pv1_current
+  pv2_current_112: sensor.afore_pv2_current
+  pv1_voltage_109: sensor.afore_pv1_voltage
+  pv2_voltage_111: sensor.afore_pv2_voltage
+  battery_power_190: sensor.afore_battery_power
+  battery_current_191: sensor.afore_battery_current
+  battery_temp_182: sensor.afore_battery_temperature
+  battery_voltage_183: sensor.afore_battery_voltage
+  battery_soc_184: sensor.afore_battery_soc
+  battery_current_direction: sensor.afore_battery_power
+  day_battery_discharge_71: sensor.afore_daily_battery_discharge
+  day_battery_charge_70: sensor.afore_daily_battery_charge
+  battery_status: sensor.afore_battery_status
+  inverter_status_59: sensor.afore_running_status
+  inverter_voltage_154: sensor.afore_ac_voltage
+  load_frequency_192: sensor.afore_ac_frequency
+  inverter_current_164: sensor.afore_grid_current
+  inverter_power_175: sensor.afore_output_active_power
+  grid_power_169: sensor.afore_power_from_grid
+  radiator_temp_91: sensor.afore_inverter_radiator_temperature
+  dc_transformer_temp_90: sensor.afore_inverter_inner_temperature
+  day_load_energy_84: sensor.afore_etoday_to_load
+  day_grid_import_76: sensor.afore_etoday_received_from_grid
+  day_grid_export_77: sensor.afore_etoday_feed_into_grid
+  grid_voltage: sensor.rele_boiler_voltage
+  grid_ct_power_172: sensor.afore_power_from_grid
+  essential_load1: sensor.rele_boiler_power
+large_font: false
+panel_mode: false
+show_battery: true
+show_grid: true
+dynamic_line_width: true
+inverter:
+  autarky: 'no'
+  auto_scale: true
+  modern: false
+  model: sofar
+decimal_places: 1
