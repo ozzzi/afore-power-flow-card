@@ -3,7 +3,7 @@
 1. Obtaining Wi-Fi data logger IP address
 
 - MacOs, Linux: `nmap 192.168.1.0/24`
-- Windows: any IP look up softare
+- Windows: any IP scanner software
 - Python: [https://pysolarmanv5.readthedocs.io/en/stable/utilities.html]()
 
 2. On your router (DHCP settings), reserve the IP for the Wi-Fi data logger so that it will not change.
